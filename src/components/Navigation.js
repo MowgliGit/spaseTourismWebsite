@@ -40,14 +40,18 @@ export default function Navigation() {
   return (
     <div className="navigation">
       <div className="logo">
-        <img src="../shared/logo.svg" alt="logo" className="logoImg" />
+        <img
+          src="/spaseTourismWebsite/shared/logo.svg"
+          alt="logo"
+          className="logoImg"
+        />
       </div>
       <div className="hamburgerBox" onClick={toggleMenu}>
         {!isMenuOpen ? (
           <div className="hamburgerMenu">
             <img
               className="hamburgerMenuIcon"
-              src="../shared/icon-hamburger.svg"
+              src="/spaseTourismWebsite/shared/icon-hamburger.svg"
               alt="hamburgerMenu"
             />
           </div>
@@ -55,7 +59,7 @@ export default function Navigation() {
           <div className="hamburgerClose">
             <img
               className="hamburgerCloseIcon"
-              src="../shared/icon-close.svg"
+              src="/spaseTourismWebsite/shared/icon-close.svg"
               alt="hamburgerMenu"
             />
           </div>
