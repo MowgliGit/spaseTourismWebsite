@@ -1,0 +1,823 @@
+/* style-guide.md
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+## Colors
+
+#0B0D17;
+#D0D6F9;
+#FFFFFF;
+
+## Typography HEADING
+HEADING1 --- 150px
+HEADING2 --- 100px
+HEADING3 --- 56px
+HEADING1 --- 32px
+HEADING1 --- 28px - 4.75 character spase
+
+## Typography SUBHEADING
+SUBHEADING1 28px
+SUBHEADING1 14px 2.35 character spase
+NAVTEXT 16px 2.7 character spase
+
+- Font size: 16px
+
+### Fonts
+
+- Family: 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+- Weights: 
+/
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+--- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITE SPASE
+ - SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* bellow 130rem 1300px */
+@media (max-width: 80em) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo::after {
+    display: none;
+  }
+  .homeSection {
+    width: 110rem;
+    margin: 0 auto;
+  }
+  .section {
+    width: 110rem;
+    margin: 0 auto;
+  }
+  .homeGrid {
+    gap: 5rem;
+  }
+  .homeImageBox {
+    justify-self: center !important;
+  }
+  /* destination */
+  .sectionDestination {
+    max-width: 120rem;
+    padding-top: 1rem;
+    overflow-x: hidden;
+  }
+  .gridDestination {
+    padding: 1rem;
+    gap: 5rem;
+    overflow: hidden;
+  }
+  .destionationInfo {
+    padding-right: 3rem;
+  }
+  .destinationLine {
+    max-width: 95%;
+  }
+
+  .destinationImage {
+    width: 100%;
+    height: 38rem;
+  }
+  .halfBlackCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    overflow: hidden !important;
+    clip-path: circle(65.3% at 76% 84%);
+  }
+  /* crew */
+  .sectionCrew {
+    padding: 2rem 8rem;
+    position: relative;
+    z-index: 1;
+  }
+  .crewTextBox {
+    margin-top: 2rem !important;
+    gap: 10rem;
+  }
+  .circles {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    left: 13%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  /* technology */
+  .sectionTechnology {
+    position: relative;
+    padding: 2rem 0rem 3rem 8rem;
+  }
+  .gridTechology {
+    padding: 2rem 0rem 3rem 0rem;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #ffffff;
+  }
+  .techParagraph {
+    padding: 0rem 2rem 0rem 0rem;
+  }
+}
+/* bellow 115rem 1150px * */
+@media (max-width: 71em) {
+  html {
+    font-size: 56.25%;
+  }
+  .homeGrid {
+    padding: 10rem 8rem 4rem 8rem;
+    gap: 12rem;
+  }
+  .homeCircleBox {
+    text-align: start;
+    position: relative;
+  }
+  /* destination */
+  .sectionDestination {
+    padding: 2rem 5rem;
+    max-width: 110rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .gridDestination {
+    padding: 2rem;
+    gap: 5rem;
+  }
+  /* crew */
+  .sectionCrew {
+    padding: 3rem 5em;
+  }
+  .crewImg {
+    width: 90%;
+    height: 50rem;
+  }
+  .crewTextBox {
+    margin-top: 5rem !important;
+  }
+  .circles {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 12%;
+    left: 11%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+/* bellow 976px */
+@media (max-width: 61em) {
+  html {
+    font-size: 50%;
+  }
+  .homeGrid {
+    gap: 5rem !important;
+  }
+  .homeHeading {
+    font-size: 12rem;
+  }
+  /* destination */
+  .sectionDestination {
+    max-width: 100rem;
+    padding: 5rem 5rem 4rem 5rem;
+    margin: 0 auto;
+  }
+  .gridDestination {
+    padding: 2rem 0rem;
+    gap: 8rem;
+    overflow: hidden;
+  }
+  .sectionCrew {
+    padding: 4rem 5em;
+  }
+  .crewImg {
+    width: 90%;
+    height: 58rem;
+  }
+  /* technology */
+  .sectionTechnology {
+    position: relative;
+    padding: 5rem 0rem 3rem 7rem;
+  }
+  .gridTechology {
+    padding: 4rem 0rem 3rem 2rem;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    color: #ffffff;
+  }
+  .techName {
+    font-size: 5rem;
+  }
+}
+/* bellow 812px */
+@media (max-width: 50em) {
+  .logoImg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .navigation {
+    padding: 1rem 0rem 0rem 2rem !important;
+  }
+  .navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem 0rem 3rem;
+  }
+  .navItem {
+    font-size: 1.5rem;
+  }
+  .navLink:link,
+  .navLink:visited {
+    padding-bottom: 3rem;
+  }
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+  .mainNumber {
+    font-size: 2.8rem;
+  }
+  .paragraph {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+  .section {
+    max-width: 100vw;
+  }
+  .homeSection {
+    margin: 0 auto;
+    /* max-width: 70rem; */
+    max-width: 100vw;
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .homeGrid {
+    padding: 5rem 8rem 0rem 8rem;
+    display: grid;
+    gap: 5rem !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    overflow-y: visible;
+  }
+  .homeTextBox {
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .homeSubheading {
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+  }
+  .homeHeading {
+    font-size: 10rem;
+    font-weight: 500;
+    letter-spacing: 2rem;
+  }
+  .paragraphHome {
+    padding: 0rem 8rem;
+    text-align: center;
+  }
+  .homeImageBox {
+    overflow: visible;
+  }
+  .circleHome {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    letter-spacing: 2px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  a:link,
+  a:visited {
+    color: #333;
+    text-decoration: none !important;
+  }
+  .circleBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    text-decoration: none !important;
+    background-color: rgba(23, 23, 23, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    opacity: 0;
+  }
+  .homeCircleBox:hover .circleBackground {
+    opacity: 1;
+  }
+  /* destination */
+  .sectionDestination {
+    /* max-width: 85rem; */
+    /* padding: 2rem 5rem; */
+    margin: 0 auto;
+    max-width: 100vw;
+  }
+  .gridDestination {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem !important;
+    overflow: hidden;
+    padding: 0rem 10rem;
+  }
+  .destinationImage {
+    width: 100%;
+    height: 22rem;
+  }
+  .destinationMenu {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .destinationTitle {
+    font-size: 1.6rem;
+  }
+  .subTitle {
+    text-align: center;
+    font-size: 6rem;
+  }
+  .destinationTextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .paragraphDestination {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  .destinationLine {
+    margin-top: -1.5rem;
+    margin-bottom: -1.5rem;
+    max-width: 85rem !important;
+    transform: scaleX(200);
+    opacity: 0.5;
+    height: 1px !important;
+    transform-origin: center;
+    display: block;
+    color: #fff;
+  }
+  .destinationInformationBox {
+    display: flex;
+    gap: 15rem;
+  }
+  .destDistance,
+  .destTime {
+    font-size: 1.8rem;
+    letter-spacing: 2.35;
+  }
+  .destKm,
+  .destInf {
+    font-size: 3.2rem;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 2.35;
+  }
+
+  /* crew */
+  .sectionCrew {
+    /* max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem 2rem; */
+    /* margin: 0 auto;*/
+    max-width: 100vw;
+  }
+  .mainTitle {
+    margin-bottom: 1rem !important;
+  }
+  .gridCrew {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1fr;
+    justify-content: center;
+    align-items: start;
+    gap: 2.5rem;
+    padding: 1rem 5rem;
+  }
+  .crewTextBox {
+    margin-top: 2rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem !important;
+    position: relative;
+  }
+  .crewItem {
+    text-align: center;
+    padding: 0rem;
+    margin-bottom: 0.05rem;
+  }
+  .crewTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .crewName {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .crewparagraph {
+    margin-bottom: 1.5rem !important;
+    font-size: 1.8rem;
+  }
+  .circles {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center !important;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate();
+  }
+  .circle {
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+  }
+  .crewImageContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+  .crewImg {
+    width: 90%;
+    height: 35rem;
+    justify-self: center !important;
+    align-self: start;
+    overflow: visible;
+    text-align: center;
+  }
+  /* technology */
+  .mainTitleTech {
+    margin-top: 1rem;
+    margin-left: 5rem !important;
+  }
+  .technnologyBackground {
+    max-width: 140rem;
+  }
+  .sectionTechnology {
+    /* max-width: 70rem;
+    margin: 0 auto;
+    padding: 0rem; */
+    position: relative;
+    /* margin: 0 auto; */
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .gridTechology {
+    padding: 3rem 0rem 3rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.1fr 1fr;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #ffffff;
+  }
+  .techImageContainer {
+    grid-row: 1/2;
+    margin-top: 0rem !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .techImg {
+    width: 100%;
+    height: 23rem !important;
+    grid-column: 1/2;
+    margin-top: -2rem !important;
+  }
+  .technologyButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: -4rem;
+    margin-bottom: 1.5rem;
+  }
+  .techBtn {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid rgba(189, 186, 186, 0.3) !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400 !important;
+  }
+  .techBtn:hover {
+    border: 1px solid rgb(255, 255, 255, 0.9) !important;
+  }
+  .techNumber {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 400 !important;
+  }
+  .techBtn.activBtn {
+    background-color: #ffffff;
+    color: #010318 !important;
+    font-weight: 400 !important;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .techTextBox {
+    text-align: center;
+    padding: 0 15rem;
+    margin-top: 1.5rem;
+  }
+  .techName {
+    font-size: 4rem !important;
+  }
+  .techTextBox {
+    width: 100%;
+    padding: 0 5rem;
+    margin: 0;
+  }
+  .techParagraph {
+    font-size: 1.7rem;
+  }
+}
+/* bellow 540px */
+@media (max-width: 33em) {
+  .logo {
+    padding: 1rem 0rem 0rem 1rem;
+  }
+  .hamburgerMenuIcon {
+    display: block;
+    margin: 1rem 2rem 0rem 0rem;
+  }
+  .hamburgerCloseIcon {
+    margin: 1rem 2rem 0rem 0rem;
+  }
+  .navigation {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .navList {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .navigation {
+    padding: 2rem;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(1, 5, 24, 0.781);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    padding: 5rem;
+  }
+  .navItem,
+  .navIndex {
+    font-size: 2.5rem;
+    font-weight: 400 !important;
+    color: #ffffff;
+  }
+  /* home */
+  .homeSection {
+    margin: 0 auto;
+    max-width: 65rem;
+    overflow-y: hidden;
+    max-width: 100vw;
+  }
+  .homeHeading {
+    font-size: 9rem;
+    font-weight: 500;
+    letter-spacing: 2rem;
+  }
+  .homeGrid {
+    padding: 2rem 8rem 0rem 8rem;
+    display: grid;
+    gap: 7rem !important;
+    align-items: start;
+  }
+  .paragraphHome {
+    margin-top: 0.2rem;
+    padding: 0;
+    font-size: 1.8rem;
+  }
+  .circleHome {
+    align-self: start;
+    width: 20rem;
+    height: 20rem;
+  }
+  .circleBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33rem;
+    height: 33rem;
+  }
+  /* destination */
+  .sectionDestination {
+    /* max-width: 60rem;
+    padding: 0.5rem 2rem; */
+    margin: 0 auto !important;
+    max-width: 100vw;
+  }
+  .mainTitle {
+    text-align: center;
+  }
+  .destinationImage {
+    max-width: 100%;
+    height: 18rem;
+  }
+  .gridDestination {
+    margin-top: -1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem !important;
+  }
+  .destinationMenu {
+    margin-top: -0.5rem;
+  }
+  .destinationTitle {
+    font-size: 1.8rem;
+  }
+  .subTitle {
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
+  .paragraphDestination {
+    font-size: 1.6rem;
+  }
+  .destinationInformationBox {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .destionationInfo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0;
+    margin: 0;
+  }
+  .destionationInf {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    letter-spacing: 0.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .destDistance,
+  .destTime {
+    font-size: 1.6rem;
+    letter-spacing: 2.35;
+  }
+  .destKm,
+  .destInf {
+    font-size: 2.6rem;
+    font-weight: 300;
+  }
+  /* crew */
+  .sectionCrew {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    max-width: 100vw;
+  }
+  .gridCrew {
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .crewImageContainer {
+    grid-row: 1;
+    justify-self: center;
+  }
+  .crewTextBox {
+    grid-row: 2;
+    justify-self: center;
+    text-align: center;
+  }
+  .crewImg {
+    width: 70%;
+    height: 28rem;
+  }
+  .crewTextBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+  }
+  .crewTitle {
+    font-size: 2.8rem;
+  }
+  .crewItem {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .crewName {
+    font-size: 5rem;
+  }
+  .circles {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 100%;
+  }
+  .circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgba(139, 132, 132, 0.3);
+    border-radius: 50%;
+    border: 2px solid inherit;
+    cursor: pointer;
+  }
+  .circles {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  /* technology */
+  .sectionTechnology {
+    max-width: 100vw;
+  }
+}

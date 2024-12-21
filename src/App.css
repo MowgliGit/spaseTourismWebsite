@@ -1,0 +1,699 @@
+/* style-guide.md
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+
+## Colors
+
+#0B0D17;
+#D0D6F9;
+#FFFFFF;
+
+## Typography HEADING
+HEADING1 --- 150px
+HEADING2 --- 100px
+HEADING3 --- 56px
+HEADING1 --- 32px
+HEADING1 --- 28px - 4.75 character spase
+
+## Typography SUBHEADING
+SUBHEADING1 28px
+SUBHEADING1 14px 2.35 character spase
+NAVTEXT 16px 2.7 character spase
+
+- Font size: 16px
+
+### Fonts
+
+- Family: 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+- Weights: 
+
+/
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+--- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+--- 07 WHITE SPASE
+ - SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /*10 / 16 = 0.625 * 100 = 62.5 */
+  /* 1rem = 1em = 16px */
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Overpass", serif;
+  overflow: none;
+  font-weight: 200;
+}
+
+/* LOGO */
+.logo {
+  position: relative;
+  display: block;
+  display: flex;
+  gap: 5rem;
+  z-index: 9;
+}
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translate(100%, 50%);
+  width: 43rem;
+  height: 0.2px !important;
+  background-color: rgba(255, 255, 255, 0.342);
+  transform-origin: right;
+  z-index: 999 !important;
+}
+/* NAVIGATION */
+.navigation {
+  padding: 2rem 0rem 0rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  background-color: rgba(185, 187, 199, 0.1);
+  border-bottom: 2px solid transparent;
+  position: relative;
+  z-index: 9999999;
+}
+.hamburgerBox {
+  z-index: 20;
+  cursor: pointer;
+}
+.hamburgerMenuIcon {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
+.hamburgerCloseIcon {
+  width: 3rem;
+  height: 3rem;
+  z-index: 9999999999999999;
+  color: #ffffff;
+  cursor: pointer;
+}
+.navList {
+  padding: 3rem 14rem 0rem 14rem;
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  z-index: 99999999;
+}
+.navItem {
+  font-size: 1.6rem;
+  color: #ffffff;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+.navLink:link,
+.navLink:visited {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-bottom: 3rem;
+  font-weight: 200;
+}
+.navItem .navLink.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.navItem .navLink:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #837e7e;
+  z-index: 1;
+}
+.navIndex {
+  margin-right: 1rem;
+  font-weight: 400;
+}
+/* reusable classes */
+.section {
+  max-width: 120rem;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mainTitle {
+  font-size: 2.8rem;
+  letter-spacing: 4.75;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+.mainTitle:last-child {
+  margin-bottom: 0rem;
+  color: #ffffff;
+}
+.mainNumber {
+  font-size: 3.2rem;
+  letter-spacing: 4.75;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 3.2rem;
+  margin-right: 1rem;
+  color: #837e7e;
+}
+.paragraph {
+  margin-top: -1rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 2.8rem;
+  overflow: hidden;
+}
+.navIndex {
+  margin-right: 1rem;
+}
+/* end of reusable classes */
+/* HOMEGRID */
+.section,
+.homeSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.homeBackground {
+  /* max-width: 160rem;
+  margin: 0 auto; */
+  /*  */
+  background-image: url("../public/home/background-home-desktop.jpg"),
+    linear-gradient(rgba(11, 13, 23, 0.5), rgba(11, 13, 23, 1));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.homeGrid {
+  padding: 9rem 15rem 5rem 15rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: #ffffff;
+}
+.homeTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.homeSubheading {
+  font-size: 2.8rem;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.homeHeading {
+  font-size: 15rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2rem;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 2;
+  font-weight: 200;
+}
+.paragraphHome {
+  margin-top: -2.5rem;
+  padding: 0 5rem 0 0;
+}
+.homeImageBox {
+  justify-self: flex-end;
+  position: relative;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.circleHome {
+  color: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #111;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-weight: 400;
+  letter-spacing: 2px;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+a:link,
+a:visited {
+  color: #333;
+  text-decoration: none !important;
+}
+.circleBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  text-decoration: none !important;
+  background-color: rgba(23, 23, 23, 0.5);
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  opacity: 0;
+}
+.homeCircleBox:hover .circleBackground {
+  opacity: 1;
+}
+/* DESTINATION CSS */
+.destinationBackground {
+  /* max-width: 160rem;
+  margin: 0 auto; */
+  background-image: url("../public/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100vh;
+  overflow-y: hidden;
+  color: #ffffff;
+  position: relative;
+}
+.destinationBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to top right,
+    rgba(2, 52, 82, 0.4),
+    rgba(1, 19, 41, 0.4)
+  );
+  background-blend-mode: overlay;
+  z-index: 1;
+  pointer-events: none;
+}
+.gridDestination {
+  padding: 2rem 0rem;
+  gap: 10rem;
+  justify-content: center;
+  align-items: start;
+  align-items: center;
+}
+.sectionDestination {
+  padding: 1rem 6rem;
+  position: relative;
+  z-index: 1;
+}
+.imageContainer {
+  justify-self: center !important;
+}
+.imageContainer,
+.destinationInfo {
+  height: 100%;
+}
+.destinationImageBox {
+  margin-top: 3rem;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.destinationImage {
+  width: 100%;
+  height: 36rem;
+  border-radius: 50%;
+  position: relative;
+}
+.halfBlackCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden !important;
+  clip-path: circle(68.3% at 75% 85%);
+}
+.destinationMenu {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+.destinationTitle {
+  font-size: 1.6rem;
+  letter-spacing: 2.75;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+.destinationTitle:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #837e7e;
+  z-index: 1;
+}
+.destinationTitle.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.destinationTitle.active:hover::before {
+  background-color: #ffffff;
+}
+.subTitle {
+  text-transform: uppercase;
+  font-size: 8rem;
+  letter-spacing: 10px;
+  font-weight: 300;
+}
+.destinationInformationBox {
+  margin-top: 2rem;
+  display: flex;
+  gap: 8rem;
+}
+.destionationInfo {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+.destionationInf {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+.destDistance,
+.destTime {
+  font-size: 1.4rem;
+  letter-spacing: 2.35;
+}
+.destKm {
+  font-size: 2.8rem;
+}
+span {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 2.35;
+}
+.destinationLine {
+  max-width: 85rem !important;
+  height: 1px !important;
+  transform-origin: center;
+  margin-bottom: 1rem;
+  display: block;
+  color: #fff;
+}
+/* CREW CSS */
+.crewBackground {
+  /* max-width: 160rem;
+  margin: 0 auto; */
+  background-image: url("../public/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.crewBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top right,
+    rgba(1, 11, 34, 0.9),
+    rgba(145, 183, 201, 0.4)
+  );
+  background-blend-mode: overlay;
+  z-index: 0;
+  pointer-events: none;
+}
+.sectionCrew {
+  padding: 2rem 6rem;
+  position: relative;
+  z-index: 1;
+}
+.gridCrew {
+  gap: 1rem;
+}
+.crewImageContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: visible;
+}
+.crewImg {
+  width: 100%;
+  object-fit: contain;
+  height: 45rem;
+  justify-self: end !important;
+  overflow: visible;
+}
+.crewTextBox {
+  margin-top: 7rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+.crewItem {
+  text-align: start;
+}
+.crewTitle {
+  font-size: 2.8rem;
+  margin-bottom: 2.8rem;
+  letter-spacing: 4.75;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #837e7e;
+}
+.crewName {
+  font-size: 5rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem;
+  font-weight: 300;
+}
+.crewparagraph {
+  margin-bottom: auto !important;
+}
+.circles {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(139, 132, 132, 0.3);
+  border-radius: 50%;
+  border: 2px solid inherit;
+  cursor: pointer;
+}
+.circle.activ {
+  background-color: #ffffff;
+  z-index: 1;
+}
+.circle:hover {
+  background-color: rgba(233, 227, 227, 0.5);
+  z-index: 1;
+}
+/* TECHNOLOGY */
+.technnologyBackground {
+  background-image: url("../public/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100vw !important;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.technnologyBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 10, 31, 0.2),
+    rgba(12, 20, 44, 0.2)
+  );
+  background-blend-mode: overlay;
+  z-index: 0;
+  pointer-events: none;
+}
+.sectionTechnology {
+  position: relative;
+  padding: 2rem 0rem 3rem 15rem;
+}
+.gridTechology {
+  padding: 2rem 0rem 3rem 0rem;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1fr;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+  color: #ffffff;
+}
+.techImageContainer {
+  margin-top: -3rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.techImg {
+  width: 80%;
+  display: block;
+  height: 42rem !important;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5rem;
+  justify-self: end !important;
+}
+.technologyButtons {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.techTextBox {
+  margin-top: 5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.techTitle {
+  font-size: 1.8rem;
+  font-weight: 200;
+  letter-spacing: 4.75;
+  text-transform: uppercase;
+}
+.techName {
+  font-size: 5.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.techParagraph {
+  line-height: 2;
+  padding: 0rem 0rem 0rem 0rem;
+}
+.technologyButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.techBtn {
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid rgba(189, 186, 186, 0.3) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400 !important;
+}
+.techBtn:hover {
+  border: 1px solid rgb(255, 255, 255, 0.9) !important;
+}
+.techNumber {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 400 !important;
+}
+.techBtn.activBtn {
+  background-color: #ffffff;
+  color: #010318 !important;
+  font-weight: 400 !important;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.techNumber.activBtn {
+  color: #010318 !important;
+  font-weight: 400 !important;
+}
