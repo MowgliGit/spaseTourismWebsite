@@ -64,6 +64,10 @@ body {
   overflow: none;
   font-weight: 200;
 }
+.App {
+  max-width: 140rem;
+  margin: 0 auto;
+}
 
 /* LOGO */
 .logo {
