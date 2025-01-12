@@ -622,12 +622,12 @@ span {
   z-index: 0;
   pointer-events: none;
 }
-.section,
+/* .section,
 .sectionTechnology {
   max-width: 140rem;
   margin: 0 auto;
   padding: 1rem;
-}
+} */
 .sectionTechnology {
   max-width: 140rem;
   margin: 0 auto;
