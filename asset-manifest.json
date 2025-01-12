@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spaseTourismWebsite/static/css/main.b689a44c.css",
+    "main.css": "/spaseTourismWebsite/static/css/main.73639a90.css",
     "main.js": "/spaseTourismWebsite/static/js/main.e10e4c9a.js",
     "static/js/488.d2485b95.chunk.js": "/spaseTourismWebsite/static/js/488.d2485b95.chunk.js",
     "static/media/background-home-desktop.jpg": "/spaseTourismWebsite/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
@@ -8,12 +8,12 @@
     "static/media/background-crew-desktop.jpg": "/spaseTourismWebsite/static/media/background-crew-desktop.88a3c692fd34eb311e04.jpg",
     "static/media/background-technology-desktop.jpg": "/spaseTourismWebsite/static/media/background-technology-desktop.b7b589b3c0c5ef0811d4.jpg",
     "index.html": "/spaseTourismWebsite/index.html",
-    "main.b689a44c.css.map": "/spaseTourismWebsite/static/css/main.b689a44c.css.map",
+    "main.73639a90.css.map": "/spaseTourismWebsite/static/css/main.73639a90.css.map",
     "main.e10e4c9a.js.map": "/spaseTourismWebsite/static/js/main.e10e4c9a.js.map",
     "488.d2485b95.chunk.js.map": "/spaseTourismWebsite/static/js/488.d2485b95.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b689a44c.css",
+    "static/css/main.73639a90.css",
     "static/js/main.e10e4c9a.js"
   ]
 }
