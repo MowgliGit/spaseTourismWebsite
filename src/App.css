@@ -355,14 +355,9 @@ a:visited {
   align-items: start;
   align-items: center;
 }
-/* .section,
+
 .sectionDestination {
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-} */
-.sectionDestination {
-  padding: 1rem 6rem;
+  padding: 1rem 6rem !important;
   position: relative;
   z-index: 1;
 }
@@ -485,8 +480,6 @@ span {
 }
 /* CREW CSS */
 .crewBackground {
-  /* max-width: 160rem;
-  margin: 0 auto; */
   background-image: url("../public/crew/background-crew-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -511,14 +504,8 @@ span {
   z-index: 0;
   pointer-events: none;
 }
-/* .section,
 .sectionCrew {
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-} */
-.sectionCrew {
-  padding: 2rem 6rem;
+  padding: 2rem 6rem !important;
   position: relative;
   z-index: 1;
 }
@@ -622,12 +609,6 @@ span {
   z-index: 0;
   pointer-events: none;
 }
-/* .section,
-.sectionTechnology {
-  max-width: 140rem;
-  margin: 0 auto;
-  padding: 1rem;
-} */
 .sectionTechnology {
   max-width: 140rem;
   margin: 0 auto;
