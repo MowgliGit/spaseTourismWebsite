@@ -355,12 +355,12 @@ a:visited {
   align-items: start;
   align-items: center;
 }
-.section,
+/* .section,
 .sectionDestination {
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
-}
+} */
 .sectionDestination {
   padding: 1rem 6rem;
   position: relative;
@@ -511,12 +511,12 @@ span {
   z-index: 0;
   pointer-events: none;
 }
-.section,
+/* .section,
 .sectionCrew {
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
-}
+} */
 .sectionCrew {
   padding: 2rem 6rem;
   position: relative;
