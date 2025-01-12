@@ -65,7 +65,7 @@ body {
   font-weight: 200;
 }
 .App {
-  max-width: 140rem;
+  max-width: 144rem;
   margin: 0 auto;
 }
 
@@ -91,6 +91,8 @@ body {
 }
 /* NAVIGATION */
 .navigation {
+  max-width: 140rem;
+  margin: 0 auto;
   padding: 2rem 0rem 0rem 5rem;
   display: flex;
   align-items: center;
@@ -353,6 +355,12 @@ a:visited {
   align-items: start;
   align-items: center;
 }
+.section,
+.sectionDestination {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 .sectionDestination {
   padding: 1rem 6rem;
   position: relative;
@@ -503,6 +511,12 @@ span {
   z-index: 0;
   pointer-events: none;
 }
+.section,
+.sectionCrew {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 .sectionCrew {
   padding: 2rem 6rem;
   position: relative;
@@ -579,16 +593,20 @@ span {
 }
 /* TECHNOLOGY */
 .technnologyBackground {
+  max-width: 100%;
+  margin: 0 auto;
   background-image: url("../public/technology/background-technology-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  width: 100vw !important;
+  /* width: 100vw !important; */
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
 .technnologyBackground::before {
+  max-width: 100%;
+  margin: 0 auto;
   content: "";
   position: absolute;
   top: 0;
@@ -604,7 +622,15 @@ span {
   z-index: 0;
   pointer-events: none;
 }
+.section,
 .sectionTechnology {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.sectionTechnology {
+  max-width: 140rem;
+  margin: 0 auto;
   position: relative;
   padding: 2rem 0rem 3rem 15rem;
 }
